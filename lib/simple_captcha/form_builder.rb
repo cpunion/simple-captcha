@@ -3,7 +3,6 @@ module SimpleCaptcha
     def self.included(base)
       base.send(:include, SimpleCaptcha::ViewHelper)
       base.send(:include, SimpleCaptcha::FormBuilder::ClassMethods)
-      base.send(:include, ActionView::Helpers)
       if defined? Sprockets::Helpers
         base.send(:include, Sprockets::Helpers::RailsHelper)
         base.send(:include, Sprockets::Helpers::IsolatedHelper)
